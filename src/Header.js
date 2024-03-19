@@ -1,18 +1,23 @@
-import React from 'react';
-import './Header.css'; // You might want to create a separate CSS file for the menu
+import React, { useState, useEffect } from 'react';
+import './Header.css';
 
 const Header = () => {
+  const [menuItems, setMenuItems] = useState([]);
+
+  useEffect(() => {
+    fetch(`${window.configs.apiUrl}/categories`)
+      .then(response => response.json())
+      .then(data => setMenuItems(data))
+      .catch(error => console.error('Error fetching data:', error));
+  }, []); // The empty array ensures this effect runs only once after the initial render
+
   return (
     <nav className="navbar">
       <div className="logo">HAPPYNEWS</div>
       <div className="menu">
-        <a href="#home">Home</a>
-        <a href="#debate">Politics</a>
-        <a href="#india-news">Health</a>
-        <a href="#news-details">Entertainment</a>
-        <a href="#sports-news">Sports News</a>
-        <a href="#sports-details">Sports Details</a>
-        <a href="#contact">Contact</a>
+        {menuItems.map(item => (
+          <a key={item.id} href='#'>{item.category}</a>
+        ))}
         <div className="dropdown">
           <button className="dropbtn">Dropdown</button>
           <div className="dropdown-content">
