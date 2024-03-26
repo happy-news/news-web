@@ -1,0 +1,53 @@
+.newsGrid {
+  flex: 1;
+  min-width: calc(33.333% - (16px * 2 / 3)); /* Adjust for 3 items per row, accounting for the gap */
+  max-width: calc(33.333% - (16px * 2 / 3));
+  }
+  
+  .adBanner, .mainNews {
+    text-align: center; /* Center text horizontally */
+    color: white; /* Text color */
+    height: 240px; /* Set the height to match the image's height */
+  background-size: cover; /* This will ensure that the image covers the div */
+  background-position: center;
+  }
+  
+  .adBanner {
+    background-color: green; /* Placeholder color */
+    grid-row: 1;
+  }
+  
+  .mainNews {
+    background-color: blue; /* Placeholder color */
+    grid-row: 1;
+  }
+  
+  .newsContent {
+    background-color: white; /* Placeholder color */
+    color: red; /* Text color */
+    padding: 20px; /* Add padding */
+    margin-bottom: 10px; /* Space between news content and news items */
+  }
+  
+  .newsItem {
+    background-color: purple; /* Placeholder color */
+    color: white; /* Text color */
+    padding: 10px; /* Add padding */
+    margin-bottom: 10px; /* Space between news items */
+  }
+
+  @media (max-width: 768px) { /* Adjust breakpoint as needed */
+    .news-grid-item {
+      min-width: calc(50% - 8px); /* Adjust for 2 items per row on smaller screens */
+      max-width: calc(50% - 8px);
+    }
+  }
+  
+  @media (max-width: 480px) { /* Adjust breakpoint as needed */
+    .news-grid-item {
+      min-width: 100%; /* Full width for very small screens, 1 item per row */
+      max-width: 100%;
+    }
+  }
+  
+  /* Additional styles for text, colors, etc., can be added here */

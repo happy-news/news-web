@@ -16,16 +16,9 @@ const Header = () => {
       <div className="logo">HAPPYNEWS</div>
       <div className="menu">
         {menuItems.map(item => (
-          <a key={item.id} href='#'>{item.category}</a>
+          <a key={item.id} href='#'>{item.category.toUpperCase()}</a>
         ))}
-        <div className="dropdown">
-          <button className="dropbtn">Dropdown</button>
-          <div className="dropdown-content">
-            <a href="#link1">Link 1</a>
-            <a href="#link2">Link 2</a>
-            <a href="#link3">Link 3</a>
-          </div>
-        </div>
+        
       </div>
     </nav>
   );

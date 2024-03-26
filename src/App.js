@@ -1,7 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
-import NewsGrid from './NewsGrid';
+import NewsGrid from './NewsGridItem';
 import Header from './Header';
+import NewsBody from './NewsBody';
 
 function App() {
   return (
@@ -9,7 +10,8 @@ function App() {
       <header className="App-header">
         <Header/>
       </header>
-      <NewsGrid/>
+
+      <NewsBody/>
     </div>
   );
 }
