@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Header.css';
+import Login from './Login';
 
 const Header = () => {
   const [menuItems, setMenuItems] = useState([]);
@@ -18,7 +19,7 @@ const Header = () => {
         {menuItems.map(item => (
           <a key={item.id} href='#'>{item.category.toUpperCase()}</a>
         ))}
-        
+        <Login/>
       </div>
     </nav>
   );
