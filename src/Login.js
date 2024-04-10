@@ -17,8 +17,8 @@ function Login() {
     }, [ signIn ]);
     return (
         state.isAuthenticated ? 
-        <a onClick={handleLogout}>LOGOUT</a> :
-        <a onClick={handleLogin}>LOGIN</a>
+        <a href="#" onClick={handleLogout}>LOGOUT</a> :
+        <a href="#" onClick={handleLogin}>LOGIN</a>
     );
 }
 
